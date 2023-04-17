@@ -9,6 +9,7 @@
           !loginForm.get('email')?.valid &&
           (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)
         "
+        class="error-msg"
       >
         <div *ngIf="loginForm.get('email')?.hasError('required')">
           Email required.
@@ -32,6 +33,7 @@
           (loginForm.get('password')?.dirty ||
             loginForm.get('password')?.touched)
         "
+        class="error-msg"
       >
         <div *ngIf="loginForm.get('password')?.hasError('required')">
           Password required.

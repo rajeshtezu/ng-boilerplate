@@ -7,8 +7,8 @@ This project is a boilerplate containing following configurations
 - [x] Root app
 - [x] Routing
 - [x] Lazy loading
-- [] Unauthenticated routes
-- [] Authenticated routes
+- [x] Unauthenticated routes
+- [x] Authenticated routes
 - [x] Common layout for authenticated routes
 
 **Ngrx features**
@@ -16,6 +16,8 @@ This project is a boilerplate containing following configurations
 - [] @ngrx/store - store configuration
 
 ## Project Structure
+
+TODO
 
 ## Start development server
 

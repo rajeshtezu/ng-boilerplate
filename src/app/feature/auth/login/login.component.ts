@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RoutePath } from 'src/app/constant/routes';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +11,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
+    this.navigateIfAuthenticated();
     this.loginFormInit();
+  }
+
+  navigateIfAuthenticated() {
+    if (localStorage.getItem('user')) {
+      this.router.navigateByUrl(RoutePath.HOME);
+    }
   }
 
   loginFormInit() {
@@ -37,7 +46,8 @@ export class LoginComponent implements OnInit {
     }
 
     const { email, password } = this.loginForm.value;
+    localStorage.setItem('user', email);
 
-    console.log('Login', email, password);
+    this.router.navigateByUrl(RoutePath.HOME);
   }
 }

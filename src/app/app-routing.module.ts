@@ -5,6 +5,7 @@ import { RoutePath } from './constant/routes';
 import { LayoutComponent } from './layout/layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    // Add canActivate
+    canActivate: [AuthGuardService],
     children: [
       {
         path: RoutePath.HOME,
