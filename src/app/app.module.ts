@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { LayoutComponent } from './layout/layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, NotFoundComponent],
+  declarations: [AppComponent, LayoutComponent, NotFoundComponent, LogoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
