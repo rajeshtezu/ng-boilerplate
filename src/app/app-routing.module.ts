@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { RoutePath } from './constant/routes';
 import { LayoutComponent } from './layout/layout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./feature/home/home.module').then((m) => m.HomeModule),
   },
+  { path: RoutePath.NOT_FOUND, component: NotFoundComponent },
+  { path: '**', redirectTo: RoutePath.NOT_FOUND }, // Should be the last path
 ];
 
 @NgModule({
