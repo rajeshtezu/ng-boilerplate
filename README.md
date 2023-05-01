@@ -1,6 +1,8 @@
-# NgrxBoilerplate
+# NgBoilerplate
 
-This project is a boilerplate containing following configurations
+This project is an Angular boilerplate containing following configurations
+
+Checkout to different branches for need basis setup. Setup info specific to branch is mentioned below in [Branch Information](#branch-information) section.
 
 **Core Angular features**
 
