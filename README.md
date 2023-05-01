@@ -19,6 +19,11 @@ This project is a boilerplate containing following configurations
 
 TODO
 
+## Branch Information
+
+- `angular-core-setup`: Contains core setup with lazy loading
+- `main`: Contains latest code
+
 ## Start development server
 
 Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`.
